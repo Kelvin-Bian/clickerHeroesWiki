@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--This template provides the boilerplate required to start a project with MaterializeCSS
+      -->
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css via CDN link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!--If you import more than 1 cSS file, be aware that the styles are applied in the order they are linked-->
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Our own CSS styling sheet-->
+    <link rel="stylesheet" href="./CSS/main.css" />
+    <!--page title-->
+    <title>Skills</title>
+  </head>
+  <!--background image-->
+  <body style="background-image: url('./images/BigLogo.png')">
+    <!--banner for page-->
+    <h1><div class="pageBanner">Skills</div></h1>
+    <!--container for intro text, save button, and table-->
+    <div class="intro">
+      <!--banner for introduction-->
+      <div class="banner"><h2>Introduction</h2></div>
+      <!--intro text-->
+      <div class="introText">
+        <!--introduction text-->
+        <div class="contents">
+          Skills are unlocked through levelling up your heroes, and can be
+          useful tools that will help progression through the game. There are
+          currently a total of 9 skills that can be activated on a set cooldown
+          after unlock. Upon activation, your heroes or clicks will increase in
+          power for a set duration depending on the skill description. The
+          various skill names, descriptions, costs, unlocking requirements, and
+          cooldowns can be viewed in the table below. <br />
+          <!--editable table for Hero data-->
+          <table class="contentTable">
+            <!--Table columns-->
+            <tr>
+              <th>Skill Name</th>
+              <th>Cost</th>
+              <th>Description</th>
+              <th>Unlock Requirements</th>
+              <th>Cooldown</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+          <!-- PUT OUR FIRESCRIPT STUFF HERE -->
+    <div class="firebase">
+      <div class="input-field col s6">
+        <input id="name" type="text" class="validate" />
+        <label for="name">Skill Name</label>
+      </div>
+
+      <div class="input-field col s6">
+        <input id="cost" type="text" class="validate" />
+        <label for="cost">Cost</label>
+      </div>
+
+      <div class="input-field col s6">
+        <input id="desc" type="text" class="validate" />
+        <label for="desc">Description</label>
+      </div>
+
+      <div class="input-field col s6">
+        <input id="unlock" type="text" class="validate" />
+        <label for="unlock">Unlock Requirements</label>
+      </div>
+
+      <div class="input-field col s6">
+        <input id="cooldown" type="text" class="validate" />
+        <label for="cooldown">Cooldown</label>
+      </div>
+    </div>
+    <a id="insert" class="waves-effect waves-light btn-large"
+      ><i class="material-icons left">add_circle</i>INSERT</a
+    >
+    <a id="select" class="waves-effect waves-light btn-large"
+      ><i class="material-icons left">select_all</i>REFRESH</a
+    >
+    <a id="update" class="waves-effect waves-light btn-large"
+      ><i class="material-icons left">update</i>UPDATE</a
+    >
+    <a id="delete" class="waves-effect waves-light btn-large"
+      ><i class="material-icons left">delete</i>DELETE</a
+    >
+  </div>
+    </div>
+
+    <!--button back to landing page-->
+    <a href="./index.html" class="homePage">
+      <h3>Back To Homepage</h3>
+    </a>
+    <!--JavaScript & JQuery CDN links at end of body for optimized loading-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Firebase Libraries-->
+  <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+  <!-- Also need to include fireScripts.js custom JS file -->
+  <script src="/JavaScript/firescriptskills.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("select").formSelect();
+    });
+  </script>
+  </body>
+</html>

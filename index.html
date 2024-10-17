@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--This template provides the boilerplate required to start a project with MaterializeCSS
+      -->
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css via CDN link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!--If you import more than 1 cSS file, be aware that the styles are applied in the order they are linked-->
+    <link rel="stylesheet" href="./CSS/main.css" type="text/css" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Unofficial Clicker Heroes Wiki</title>
+  </head>
+
+  <body style="background-image: url('./images/BigLogo.png')">
+    <!--Top blue banner-->
+    <h1><div class="pageBanner">The Unofficial Clicker Heroes Wiki</div></h1>
+    <!--Navigation Carousel-->
+    <div class="nav">
+      <div class="banner"><h2>Navigation</h2></div>
+      <div class="carousel">
+        <a href="./heroes.html" class="carousel-item">
+          <div class="menuIcon">
+            <div class="top">Heroes</div>
+            <img src="./images/Hero.png" alt="Heroes" />
+          </div>
+        </a>
+        <a href="./monsters.html" class="carousel-item">
+          <div class="menuIcon">
+            <img src="./images/Monster.png" alt="Monsters" />
+            <div class="top" style="right: -40px">Monsters</div>
+          </div>
+        </a>
+        <a href="./skills.html" class="carousel-item">
+          <div class="menuIcon">
+            <img src="./images/Skills.png" alt="Skills" />
+            <div class="top">Skills</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!--Introduction-->
+    <div class="intro">
+      <div class="banner"><h2>Introduction</h2></div>
+      <div class="introText">
+        Clicker Heroes is an idle game made by Playsaurus. The game was
+        originally released in 2014 for browsers, in 2015 for mobile devices,
+        and 2017 for console. <br />
+        <br />
+        The basic premise of the game revolves around killing monsters for gold,
+        which can then be used to purchase heroes to attack monsters, killing
+        them faster and earning more gold. Clicker Heroes is one of the most
+        popular and successful idle games, with over 6 million players
+        downloading the game on Steam, each player averaging 124 hours played on
+        the game. The success of Clicker Heroes has inspired many other
+        developers to produce similar games. Clicker Heroes itself was one of
+        the many games that came out partially because of the success of the
+        first hugely popular incremental game, Cookie Clicker, by Orteil.
+      </div>
+    </div>
+    <!--Container for Play Here and Play Clicker Heroes 2 Elements-->
+    <div class="playContainer">
+      <!--Play Here Element-->
+      <div class="playHere">
+        <h1>Play Clicker Heroes Here!</h1>
+        <div class="card">
+          <div class="imgBox">
+            <a href="https://store.steampowered.com/app/363970/Clicker_Heroes/", target="_blank"
+              ><img src="./images/SteamIcon.png" /></a>
+          </div>
+          <div class="contentBox">
+            <a href="https://store.steampowered.com/app/363970/Clicker_Heroes/", target="_blank"
+              ><h3>Steam</h3></a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBox">
+            <a href="https://www.clickerheroes.com/play.html", target="_blank"
+              ><img src="./images/Logo.png" /></a>
+          </div>
+          <div class="contentBox">
+            <a href="https://www.clickerheroes.com/play.html", target="_blank"
+              ><h3 id = "smaller">Browser</h3></a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBox">
+            <a href="https://apps.apple.com/us/app/clicker-heroes/id911107930", target="_blank"
+              ><img src="./images/AppleIcon.png" /></a>
+          </div>
+          <div class="contentBox">
+            <a href="https://apps.apple.com/us/app/clicker-heroes/id911107930", target="_blank"
+              ><h3>IOS</h3></a
+            >
+          </div>
+        </div>
+      </div>
+      <!--Play Clicker Heroes 2 Element-->
+      <div class="clickerHeroes2">
+        <h1>Play Clicker Heroes 2!</h1>
+        <a href="https://www.clickerheroes2.com/" target="_blank"
+          ><img src="./images/CK2BigLogo.jpg" alt="Clicker Heroes 2"
+        /></a>
+      </div>
+    </div>
+    <!--Social Media Icons-->
+    <div class="icons">
+      <ul>
+        <li id=one>
+          <a href="http://www.hths.mcvsd.org/", target="_blank"><img src="./images/hthslogo.png"/></a>
+        </li>
+        <li id=two>
+          <a href="http://www.hths.mcvsd.org/", target="_blank"><img src="./images/hthslogocolored.png"/></a>
+        </li>
+        <li id=three>
+          <a href="https://twitter.com/HighTechHS", target="_blank"><img src="./images/twitterlogo.png"/></a>
+        </li>
+        <li id=four>
+          <a href="https://twitter.com/HighTechHS", target="_blank"><img src="./images/twitterlogocolored.png"/></a>
+        </li>
+        <li id=five>
+          <a href="https://www.instagram.com/hightechhs/", target="_blank"><img src="./images/instagramlogo.png"/></a>
+        </li>
+        <li id=six>
+          <a href="https://www.instagram.com/hightechhs/", target="_blank"><img src="./images/instagramlogocolored.png"/></a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+    <!--JavaScript & JQuery CDN links at end of body for optimized loading-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".carousel").carousel({
+          shift: 200,
+        });
+      });
+    </script>
+  </body>
+</html>

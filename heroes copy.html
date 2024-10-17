@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--This template provides the boilerplate required to start a project with MaterializeCSS
+      -->
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css via CDN link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!--If you import more than 1 cSS file, be aware that the styles are applied in the order they are linked-->
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Our own CSS styling sheet-->
+    <link rel="stylesheet" href="./CSS/main.css" />
+    <!--page title-->
+    <title>Heroes</title>
+  </head>
+  <!--background image-->
+  <body style="background-image: url('./images/BigLogo.png')">
+    <!--banner for page-->
+    <h1><div class="pageBanner">Heroes</div></h1>
+    <!--container for intro text, save button, and table-->
+    <div class="intro">
+      <!--banner for introduction-->
+      <div class="banner"><h2>Introduction</h2></div>
+      <!--intro text-->
+      <div class="introText">
+        <!--button that saves all changes locally-->
+        <button id="saveButton">Click me to save!</button>
+        <!--introduction text-->
+        <div class="contenth" contenteditable="true">
+          One of the core mechanics of Clicker Heroes is the heroes. Heroes are
+          your primary source of damage, killing the monsters automatically
+          (with the exception of the first hero, Cid, who only increases your
+          click damage). Heroes can be recruited and leveled up with gold.
+          Currently, there are 54 heroes in the game.<br />
+          <br />
+          Heroes can be leveled up, increasing their total DPS by the base DPS
+          of the hero. In addition to increasing their damage, leveling a hero
+          also unlocks certain upgrades for the hero once they reach certain
+          levels. Each time you level a hero up, its next level costs 6.975%
+          more than the previous level, leading to an exponential increase in
+          the cost to level up. Every hero gets a 4x increase in their damage
+          every 25 levels from level 200 onwards, and a 10x increase in their
+          damage every 1000 levels until level 8000. Heroes can be gilded, which
+          will give them a 50% increase in damage (stackable additively). A
+          random hero becomes gilded after beating 10 levels of monsters after
+          level 100. Gilds can be transferred by either removing a gild off a
+          hero and randomly assigning it to another hero (costs 2 Hero Souls),
+          or choosing a hero to take a gild from another, randomly selected hero
+          (costs 80 Hero Souls).
+          <!--editable table for Hero data-->
+          <table class="contentTable">
+            <!--Table columns-->
+            <tr>
+              <th>Hero Name</th>
+              <th>Base Cost</th>
+              <th>Base DPS</th>
+              <th>Special Bonuses</th>
+              <th>Skill Unlock</th>
+            </tr>
+          </table>
+        </div>
+        <!--buttons to add/remove rows-->
+        <button class="addRow">Add a row!</button>
+        <button class="delRow">Delete a row!</button>
+      </div>
+    </div>
+    <!--button back to landing page-->
+    <a href="./index.html" class="homePage">
+      <h3>Back To Homepage</h3>
+    </a>
+    <!--JavaScript & JQuery CDN links at end of body for optimized loading-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+  <script>
+    //load page from previous saved state
+    window.onload = function () {
+      if (localStorage.getItem("contenth")) {
+        document.querySelector(".contenth").innerHTML = localStorage.getItem(
+          "contenth"
+        );
+      }
+    };
+    //declare variables
+    let saveButton = document.querySelector("#saveButton");
+    let contenth = document.querySelector(".contenth");
+    let addRow = document.querySelector(".addRow");
+    let delRow = document.querySelector(".delRow");
+    let table = document.querySelector(".contentTable");
+
+    saveButton.addEventListener("click", () => {
+      // Save on button click
+      localStorage.setItem("contenth", contenth.innerHTML);
+      alert("You have saved your changes.");
+    });
+    addRow.addEventListener("click", () => {
+      // Add row on button click
+      let temp = document.querySelector(".contentTable").insertRow(-1);
+      let cella = temp.insertCell(0);
+      let cellb = temp.insertCell(1);
+      let cellc = temp.insertCell(2);
+      let celld = temp.insertCell(3);
+      let celle = temp.insertCell(4);
+      cella.innerHTML = "insert text here";
+      cellb.innerHTML = "insert text here";
+      cellc.innerHTML = "insert text here";
+      celld.innerHTML = "insert text here";
+      celle.innerHTML = "insert text here";
+    });
+    delRow.addEventListener("click", () => {
+      // Delete row on button click if there is more than one row
+      if (document.querySelector(".contentTable").rows.length > 1) {
+        document.querySelector(".contentTable").deleteRow(-1);
+      }
+    });
+  </script>
+</html>
